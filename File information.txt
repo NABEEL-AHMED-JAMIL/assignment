@@ -1,0 +1,46 @@
+// information of the file
+//
+Process and Runtime class are very very important 
+//
+For opne the file
+1 File } used for scanner
+2 FileInputStream } where 2&3 are used for bytes
+3 FileOutputStream
+4 FileReader } where 4&5 are used for char
+5 FileWriter
+//
+Byte Stream class
+1 InputStream 
+2 OutputStream
+ Two of the most important are read( ) and write( ), 
+//
+Character Stream classes
+1 Reader
+2 writer
+  Two of the most important are read( ) and write( ), 
+//
+When reading the text file used the class 
+Scanner class
+// 
+Scanner inFile = new Scanner(new File(file name));
+//
+When writing the text file used the class 
+Printwriter clss or and othe way used the 
+Formatter class 
+// 
+PrintWriter out = new PrintWriter("file.txt");
+and used of the Formatter
+Formatter output = new Formatter("text.file")
+Note :: ("if the file is not in the path than it will be creat 
+by useding of the formatter object")
+====================================
+it used to terminate the programe fully 
+system.exit(0) //
+it terminate the programe due to the any exception
+system.exit(1) // 
+// file output
+Formatter(path) is used to get the data form the file
+//
+// scanner input = new scanner(new file(name of file))
+File input = new File(path); can be used for read and write both 
+==========

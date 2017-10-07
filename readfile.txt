@@ -1,0 +1,49 @@
+                  private Scanner input;
+	//
+	public void openFile(){
+		try {
+			input = new Scanner(new File("README2.txt"));
+		} catch (FileNotFoundException e) {
+			// TODO: handle exception
+			System.out.println("Error opening file");
+                                                      //program end due to the Error
+			System.exit(1);
+		}
+	}
+	//
+	// get the record from the file
+	public void readRecords(){
+		//
+		// object to be written to screen
+		AccountRecord record = new AccountRecord();
+		System.out.printf("%-10s%-12s%-12s%10s\n", 
+				"Account", "First Name", "Last Name", "Balance" ) ;
+		//
+		try {
+			while (input.hasNext()) {
+				//
+				record.setAccount( input.nextInt() ); 
+				// read account number
+				record.setFirstName( input.next() );
+				// read first name 
+				record.setLastName( input.next() );
+				// read last name 
+				record.setBalance( input.nextDouble() ); 
+				// read balance
+
+				// display
+				// display record contents 
+				System.out.printf( "%-10d%-12s%-12s%10.2f\n", 
+				record.getAccount(), record.getFirstName(), record.getLastName(), record.getBalance() );
+				
+			}
+		} catch (NoSuchElementException e) {
+			// TODO: handle exception
+		}
+	}
+
+ public void closeFile(){
+	 if(input != null){
+		 input.close(); // close file
+	 }
+ }
